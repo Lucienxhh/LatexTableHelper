@@ -45,9 +45,6 @@ def formatEachElement(table_matrix):
             # If the element is an integer greater than 1
             elif isinstance(table_matrix[i][j], int) and table_matrix[i][j] >= 1:
                 # # Convert the integer to string
-                # num_str = str(table_matrix[i][j])
-                # # Insert commas to separate thousands
-                # table_matrix[i][j] = ','.join([num_str[i:i+3][::-1] for i in range(0, len(num_str), 3)])[::-1]
                 table_matrix[i][j] = "{:,}".format(table_matrix[i][j])
                 
     return table_matrix
